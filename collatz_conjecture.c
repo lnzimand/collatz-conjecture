@@ -188,7 +188,13 @@ int main()
 {
     unsigned long long int num;
     printf("Enter an integer: ");
-    scanf("%llu", &num);
-
-    startingPoint(num);
+    if (scanf("%llu", &num) == 1)
+    {
+        startingPoint(num);
+    }
+    else
+    {
+        printf("Please enter a valid number\n");
+    }
+    return 0;
 }
