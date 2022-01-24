@@ -161,6 +161,7 @@ void collatz_conjecture(number_sequence *num_sequence)
 void *threading(void *vargp)
 {
     collatz_conjecture((number_sequence*) vargp);
+    return vargp;
 }
 
 void startingPoint(unsigned long long int num) {
